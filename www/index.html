@@ -9,7 +9,7 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
-	  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
   <script>
   var googleUser = {};
@@ -17,7 +17,7 @@
     gapi.load('auth2', function(){
       // Retrieve the singleton for the GoogleAuth library and set up the client.
       auth2 = gapi.auth2.init({
-        client_id: '686795737390-j5n1pm8som4jdheark3q336pib3101k8.apps.googleusercontent.com',
+        client_id: '686795737390-u2o1airh1e14jcm58cejmhihnfsn1991.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
         // Request scopes in addition to 'profile' and 'email'
         //scope: 'additional_scope'
@@ -73,7 +73,6 @@
       font-family: 'Roboto', sans-serif;
     }
   </style>
-	
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	
     <title>Hello World</title>
@@ -84,13 +83,17 @@
 	<div data-role="page" id="pageone"  >
 		<h1> RESTowe requesty</h1>
 		<button id="basicReq" onclick="sendBasicReq()"> Bazowy REQ do Google</button>
-		<button id="loginGoogle" onclick="loginGoogle()"> Do login Google</button>
 	</div> 
-	<h2>test</h2>
-		
-
+	<h2>test</h2>   
+      <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 	
- <div id="gSignInWrapper">
+  <!-- In the callback, you would hide the gSignInWrapper element on a
+  successful sign in -->
+  <div id="gSignInWrapper">
     <span class="label">Sign in with:</span>
     <div id="customBtn" class="customGPlusSignIn">
       <span class="icon"></span>
@@ -99,14 +102,6 @@
   </div>
   <div id="name"></div>
   <script>startApp();</script>
-  
-  
-  
-      <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
 </body>
 
 </html>
