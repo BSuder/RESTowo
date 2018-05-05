@@ -95,7 +95,7 @@ window.onGoogleYoloLoad = (googleyolo) => {
 	alert("google yolo");
 	// The 'googleyolo' object is ready for use.
 };
-/*
+
 
 var googleUser = {};
   var startApp = function() {
@@ -120,4 +120,4 @@ var googleUser = {};
         }, function(error) {
           alert(JSON.stringify(error, undefined, 2));
         });
-  }*/
+  }
