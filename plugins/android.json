@@ -1,0 +1,21 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "pl.patryk.expenseRegister"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "pl.patryk.expenseRegister"
+        },
+        "cordova-plugin-googleplus": {
+            "PACKAGE_NAME": "pl.patryk.expenseRegister"
+        }
+    },
+    "dependent_plugins": {}
+}
