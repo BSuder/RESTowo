@@ -90,3 +90,8 @@ var deviceReady = function () {
 };
 
 document.addEventListener('deviceready', deviceReady, false);
+
+window.onGoogleYoloLoad = (googleyolo) => {
+	alert("google yolo");
+	// The 'googleyolo' object is ready for use.
+};
