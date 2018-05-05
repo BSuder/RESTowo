@@ -90,3 +90,11 @@ var deviceReady = function () {
 };
 
 document.addEventListener('deviceready', deviceReady, false);
+
+  function sendBasicReq(){
+ 
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://api.nbp.pl/api/cenyzlota", false);
+    xhttp.send();
+    alert("Status: " + xhttp.status + "wartosc: " + xhttp.response);
+  }
