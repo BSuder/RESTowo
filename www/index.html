@@ -30,6 +30,7 @@
 	<meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="686795737390-j5n1pm8som4jdheark3q336pib3101k8.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Hello World</title>
 </head>
@@ -40,7 +41,29 @@
 		<button id="basicReq" onclick="sendBasicReq()"> Bazowy REQ do Google</button>
 		<button id="loginGoogle" onclick="loginGoogle()"> Do login Google</button>
 	</div> 
-	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	<div id="my-signin2"></div>
+	<text>test</text>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+
     	
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
