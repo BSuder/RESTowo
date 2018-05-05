@@ -1,7 +1,31 @@
-<!DOCTYPE html>
+<!--DOCTYPE html>
+<!html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+		<meta name="google-signin-client_id" content="323290425508-nhdtn6u9qo2b07hukv3smfio21a4clbj.apps.googleusercontent.com">
+
+		<script src="js/pgb.js"></script>
+		<script src="cordova.js"></script>
+		<script src="jquery.min.js"></script>
+	</head>
+	<body onload="init()">
+		<h1>Hello World!</h1>
+		<p id="dp"></p>
+
+		<div class="g-signin2" data-onsuccess="onSignIn()"></div>
+
+		<input type="button" onclick="HTMLtext()" value="Return google!">
+		<input type="button" onclick="onSignIn()" value="Get user data">
+		<a href="#" onclick="signOut();">Sign out</a>
+
+	</body>
+</html-->
 
 <html>
-
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <script src="cordova.js"></script>
@@ -46,39 +70,17 @@
             font-family: 'Roboto', sans-serif;
         }
     </style>
-    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	
-    <title>Hello World</title>
-
 </head>
-
 <body>
-	<div data-role="page" id="pageone"  >
-		<h1> RESTowe requesty</h1>
-		<button id="basicReq" onclick="sendBasicReq()"> Bazowy REQ do Google</button>
-	</div> 
-	<h2>test</h2>   
-      <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript">
-        app.initialize();
-    </script>
-	
-  <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
-  <div id="gSignInWrapper">
+<!-- In the callback, you would hide the gSignInWrapper element on a
+successful sign in -->
+<div id="gSignInWrapper">
     <span class="label">Sign in with:</span>
     <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <span class="buttonText">Google</span>
+        <span class="icon"></span>
+        <span class="buttonText">Google</span>
     </div>
-  </div>
-  <div id="name"></div>
+</div>
+<div id="name"></div>
 </body>
-
 </html>
